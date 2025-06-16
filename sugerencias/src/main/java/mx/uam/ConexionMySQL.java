@@ -5,20 +5,24 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionMySQL {
-    private static final String URL = "jdbc://localhost:3306/recomendador";
+    private static final String URL = "jdbc:mysql://localhost:3306/recomendador";
     private static final String USER = "root";
-    private static final String PASSWORD = "515t3m45D";
+    private static final String PASSWORD = "7vvlryPngn";
+    private Connection conn;
 
-    public static void main(String[] args){
+    public Connection getConnection(){
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conexion = DriverManager.getConnection(URL,USER,PASSWORD);
+            this.conn = DriverManager.getConnection(URL,USER,PASSWORD);
+            return conn;
         }        
         catch(ClassNotFoundException e){
             System.err.println("Ha ocurrido un error: "+ e.getMessage());
+            return  null;
         }catch(SQLException enf){
             System.err.println("No se pudo conectar al Servidor de MySQL:" + enf.getMessage());
+            return null;
         }
     
     }

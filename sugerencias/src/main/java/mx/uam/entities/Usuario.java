@@ -45,5 +45,19 @@ public class Usuario {
         this.apellido_materno = apellido_materno;
     }
 
+    @Override
+    public String toString(){
+        StringBuilder str = new StringBuilder();
+        String sep = ",";
+        str.append(id);
+        str.append(sep);
+        str.append(nombre);
+        str.append(sep);
+        str.append(apellido_paterno);
+        str.append(sep);
+        str.append(apellido_materno);
+        return str.toString();
+
+    }
     
 }

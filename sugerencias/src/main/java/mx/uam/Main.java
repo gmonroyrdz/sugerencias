@@ -9,7 +9,7 @@ public class Main {
 
         GestorUsuario g = new GestorUsuario();
         List<Usuario> list = g.getAll();
-        //print(list);
+        print(list);
 
         Usuario u1 = new Usuario(0, "Laura", "Flores", "Flores");
 

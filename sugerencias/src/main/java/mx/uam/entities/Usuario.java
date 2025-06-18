@@ -13,6 +13,13 @@ public class Usuario {
         this.nombre = nombre;
     }
 
+    public Usuario(String nombre, String apellido_materno, String apellido_paterno) {
+        this.apellido_materno = apellido_materno;
+        this.apellido_paterno = apellido_paterno;
+        this.id = 0;
+        this.nombre = nombre;
+    }
+
     public int getId() {
         return id;
     }
@@ -48,7 +55,7 @@ public class Usuario {
     @Override
     public String toString(){
         StringBuilder str = new StringBuilder();
-        String sep = ",";
+        String sep = "|";
         str.append(id);
         str.append(sep);
         str.append(nombre);

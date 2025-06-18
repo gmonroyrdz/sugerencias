@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionMySQL {
+    // MALA PRACTICA : Hardconding !!!
     private static final String URL = "jdbc:mysql://localhost:3306/recomendador";
     private static final String USER = "cliente_usr";
     private static final String PASSWORD = "p455w0rD!";
